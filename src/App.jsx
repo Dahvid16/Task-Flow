@@ -3,6 +3,7 @@ import NavBar from './Components/NavBar'
 import HeroSection from './Components/HeroSection'
 import FeaturesSection from './Components/FeaturesSection'
 import '../src/Styling/Global.css'
+import TestimonialSection from './Components/TestimonalSection'
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
     <NavBar/>
     <HeroSection/>
     <FeaturesSection/>
+    <TestimonialSection/>
     </body>
   )
 }

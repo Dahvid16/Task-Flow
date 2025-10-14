@@ -2,8 +2,19 @@
     --secondary-bg: #D6FFDE;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 .sec {
     background: radial-gradient(
         var(--secondary-bg),
         rgb(106, 201, 119));
+}
+
+.card-elegant {
+    background-color: #faf9f6;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem 1rem;
 }
