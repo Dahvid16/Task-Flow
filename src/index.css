@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@tailwind utilities;
 
 @layer base {
     :root {
@@ -20,9 +19,14 @@
     button {
         cursor: pointer;
         background-color: #37ad3c;
-        disply: flex;
+        display: flex;
         align-items: center;
         justify-content: center;
         outline: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
     }
 }

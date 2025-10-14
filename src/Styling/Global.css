@@ -18,3 +18,25 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 2rem 1rem;
 }
+
+.paddin {
+    padding-block: 8rem;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.main-txt {
+    font-size: 2rem;
+}
+
+.btnn {
+    border-radius: 20px;
+}
+
+.anchor {
+    text-decoration: none;
+    color: inherit;
+}
