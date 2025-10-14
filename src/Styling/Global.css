@@ -1,0 +1,9 @@
+:root {
+    --secondary-bg: #D6FFDE;
+}
+
+.sec {
+    background: radial-gradient(
+        var(--secondary-bg),
+        rgb(106, 201, 119));
+}
