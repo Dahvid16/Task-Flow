@@ -39,11 +39,11 @@ const Footer = () => {
 
   return (
     <footer className="sec text-primary-foreground py-16 px-16 md:py-20" style={{borderRadius: "50px 50px 0 0"}}>
-      <div className="container-custom">
+      <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div>
-            <h3 className="text-xl md:text-2xl font-bold mb-6 text-gradient-gold">Get In Touch</h3>                   
+            <h4 className="text-xl md:text-2xl font-bold mb-6 text-gradient-gold">Get In Touch</h4>                   
             {isSubmitted ? (
               <div className="card-elegant text-center bg-green-50 border-green-200">
                 <FaCheckCircle className="h-16 w-16 text-green-600 mx-auto mb-4" />
@@ -58,7 +58,7 @@ const Footer = () => {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-4 mt-4">
               <div>
                 <input
                   type="text"
@@ -66,7 +66,7 @@ const Footer = () => {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Your Name"
-                  className="form-input bg-white/10 border-white/20 text-primary-foreground placeholder-white/70"
+                  className="form-input bg-white/10 border-white/20 text-primary-foreground placeholder-black/70 blurEffect" style={{borderRadius: '20px'}}
                   required
                 />
               </div>
@@ -77,7 +77,7 @@ const Footer = () => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Your Email"
-                  className="form-input bg-white/10 border-white/20 text-primary-foreground placeholder-white/70"
+                  className="form-input bg-white/10 border-white/20 text-primary-foreground placeholder-black/70 blurEffect" style={{borderRadius: '20px'}}
                   required
                 />
               </div>
@@ -87,11 +87,13 @@ const Footer = () => {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Your Message"
-                  className="form-textarea bg-white/10 border-white/20 text-primary-foreground placeholder-white/70"
+                  className="form-textarea bg-white/10 border-white/20 text-primary-foreground placeholder-black/70 blurEffect resize-none"
+                  style={{ borderRadius: '20px' }}
+                  rows={6}
                   required
                 />
               </div>
-              <button type="submit" disabled={isSubmitting}className="btn-gold flex items-center space-x-2">
+              <button type="submit" disabled={isSubmitting} className="flex items-center space-x-2 pricingBtn px-8 py-[0.85rem] mt-3 font-bold text-white/70" style={{fontSize: '1.1rem'}}>
                 {isSubmitting ? (
                   <>
                     <div className="animate-spin rounded-full h-4 w-4 border-2 border-white border-t-transparent" />
@@ -111,17 +113,13 @@ const Footer = () => {
           <div className="space-y-8">
           {/* Logo and Description */}
             <div>
-              <a href="" className="flex items-center space-x-2 mb-4">
-                <img className="h-12 w-12 text-gold" alt='KKA_Logo' />
-                <div className="flex flex-col leading-tight">
-                  <span className="text-heading text-lg font-bold tracking-wide">
-                    Kenneth Akpom<div className='flex-nowrap text-lg tracking-widerr'> & Associates</div>
-                  </span>
-                </div>
+              <h3>
+              <a href="#Home" className="flex items-center space-x-2 mb-4 text-black" style={{textDecoration: 'none'}}>
+                TaskFlow
               </a>
+              </h3>
               <p className="text-body text-white/80">
-                Professional legal services with integrity, expertise, and dedication 
-                to serving our clients' best interests.
+                TaskFlow is an all-in-one task management platform — organize, prioritize, and track your work effortlessly using an intuitive interface and powerful integrations.
               </p>
             </div>
 
@@ -130,14 +128,14 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <FaPhoneAlt className="h-5 w-5 text-gold" />
                 <span className='cursor-pointer hover:text-gold transition-all duration-300'>
-                  +234 816 201 6410
+                  +234 90 *** *** ***
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <FaEnvelope className="h-5 w-5 text-gold" />
                 <span className='cursor-pointer hover:text-gold transition-all duration-300'>
-                  <a href="mailto:kennethakpom.associates@gmail.com" target="_blank" rel="noopener noreferrer">
-                    kennethakpom.associates@gmail.com
+                  <a href="mailto:test.taskflow@gmail.com" className='text-black' style={{textDecoration: 'none'}} target="_blank" rel="noopener noreferrer">
+                    test.taskflow@gmail.com
                   </a>
                 </span>
               </div>
@@ -149,23 +147,18 @@ const Footer = () => {
             
             {/* Social Media Links */}
             <div className="flex space-x-6">
-              <a href="#" className="p-3 bg-white/10 rounded-lg hover:bg-gold hover:text-primary transition-all duration-300" aria-label='Visit our FaceBook Page'>
-                <FaFacebookF className="h-6 w-6" />
+              <a href="#" className="p-3 blurEffect rounded-lg" aria-label='Visit our FaceBook Page'  style={{borderRadius: '12px'}}>
+                <FaFacebookF className="h-6 w-6 text-black/80"/>
               </a>
-              <a href="https://wa.me/2348162016410?text=Good%20Day%20Sir.%20I%20got%20your%20number%20from%20your%20website.%20I.." className="p-3 bg-white/10 rounded-lg hover:bg-gold hover:text-primary transition-all duration-300" aria-label='Visit our Whatsapp Page'>
-                <FaWhatsapp className="h-6 w-6" />
+              <a href="https://wa.me/2348162016410?text=Good%20Day%20Sir.%20I%20got%20your%20number%20from%20your%20website.%20I.." className="p-3 bg-white/10 rounded-lg hover:bg-gold hover:text-primary transition-all duration-300 blurEffect"  style={{borderRadius: '12px'}} aria-label='Visit our Whatsapp Page'>
+                <FaWhatsapp className="h-6 w-6 text-black/80" />
               </a>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/20 mt-12 pt-6 text-center">
-          <p className="text-white/70">
-            © 2025 Kenneth Akpom & Associates. All rights reserved.
-            <a href="" className="hover:text-gold transition-all duration-300 ml-1">Privacy Policy</a> | 
-            <a href="" className="hover:text-gold transition-all duration-300 ml-1">Terms of Service</a>
-          </p>
+        <div className="">
           <p className='hidden font-bold italic text-lg'>Dahvidweb</p>
         </div>
       </div>
