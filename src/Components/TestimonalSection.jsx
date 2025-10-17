@@ -1,7 +1,7 @@
 import React from 'react'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import { FaStar } from 'react-icons/fa';
+import { FaStar, FaRegStar } from 'react-icons/fa';
 
 const TestimonialSection = () => {
   return (
@@ -13,29 +13,36 @@ const TestimonialSection = () => {
             What our users are saying
           </h2>
 
-          <div id="impactCarousel" className="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-            <div className="carousel-inner">
+          <div id="impactCarousel" className="carousel slide w-[85%] h-60 m-auto blurEffect" data-bs-ride="carousel" data-bs-interval="5000">
+            <div className="carousel-inner h-full flex items-center">
               {[
-                { img: "https://images.unsplash.com/photo-1665586510539-cc2a12a54347?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", title: "10,000+ Students Reached", desc: "Providing quality education to underserved communities across Africa.", name: "David J." },
-                { img: "https://images.unsplash.com/flagged/photo-1579133311477-9121405c78dd?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", title: "500+ Teachers Trained", desc: "Empowering educators with AI-driven tools and offline learning methods.", name: "Anthony J." },
-                { img: "https://images.unsplash.com/photo-1668965450077-1d23194b5f86?q=80&w=725&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", title: "Improved Exam Results", desc: "Students using SmartEd have shown 30% better results in WAEC/JAMB.", name: "John A." },
-                { img: "https://images.unsplash.com/photo-1666281269793-da06484657e8?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", title: "100+ Coding Workshops", desc: "Hands-on workshops teaching programming and problem-solving skills.", name: "John J." },
-                { img: "https://images.unsplash.com/photo-1666281179585-2775d4a8d81c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", title: "ID Camps & Bootcamps", desc: "Organized intensive learning camps for students across the region.", name: "Chibu B." },
+                { img: "https://images.unsplash.com/photo-1665586510539-cc2a12a54347?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", title: "David J. testimony", desc: "TaskFlow transformed my daily routine with smarter task organization, scheduled reminders, and clear priorities. I've been able to double my output while feeling far less stressed.", name: "David J.", rating: 5 },
+                { img: "https://images.unsplash.com/flagged/photo-1579133311477-9121405c78dd?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", title: "Anthony K. Testimony", desc: "After adopting TaskFlow across our team we eliminated handoffs and missed deadlines, Clearer ownership, real-time updates and integrations which helped our velocity and collaboration to improve dramatically.", name: "Anthony K.", rating: 5 },
+                { img: "https://images.unsplash.com/photo-1668965450077-1d23194y5f86?q=80&w=725&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", title: "John A. Testimony", desc: "Using TaskFlow for assignment tracking and study plans helped students stay organized and focused. We observed roughly 30% improvement in exam performance and more consistent preparation habits after the use of TaskFlow.", name: "John A.", rating: 4 },
+                { img: "https://images.unsplash.com/photo-1666281269793-da06484657e8?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", title: "John J. Testimony", desc: "TaskFlow helped us coordinate hundreds of hands-on workshops by assisting in managing instructors, materials and schedules so participants gained practical programming and problem-solving experience.", name: "John J.", rating: 4 },
+                { img: "https://images.unsplash.com/photo-1666281179585-2775d4a8d81c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", title: "Chibu B. Testimony", desc: "Our intensive bootcamps used TaskFlow to streamline logistics and curriculum delivery with a consistent schedules, resource tracking and attendance management made scaling training programs easier.", name: "Chibu B.", rating: 5 },
               ].map((slide, idx) => (
                 <div className={`carousel-item ${idx === 0 ? "active" : ""}`} key={idx}>
-                  <div className="w-[80%] row align-items-center g-0 m-auto">
-                    <div className="flex row items-center">
-                      <div className="p-4 text-center text-md-start">
-                        <h3 className="fw-bold text-success">{slide.title}</h3>
-                        <p className="lead">{slide.desc}</p>
+                  <div className="w-[70%] m-auto">
+                    <div className="flex row items-center gap-3">
+                      <div className="p-2 text-md-start">
+                        <article className="text-lg italic font-extralight text-justify">"{slide.desc}"</article>
                       </div>
                       <div className='flex gap-3'>
                         <div className="flex items-center content-center w-16 h-16 rounded-[100%] shadow-sm overflow-hidden">
                           <img src={slide.img} className="w-full h-full" alt={slide.title} style={{ objectFit: "cover" }} />
                         </div>
                         <div className="">
-                          <h5>{slide.name}</h5>
-                          <FaStar className='text-yellow-400/80' />
+                          <h5 className="font-semibold">{slide.name}</h5>
+                          <div className="flex items-center mt-1">
+                            {Array.from({ length: 5 }).map((_, i) => (
+                              i < (slide.rating || 0) ? (
+                                <FaStar key={i} className="text-yellow-400/90 w-4 h-4" />
+                              ) : (
+                                <FaRegStar key={i} className="text-yellow-300/60 w-4 h-4" />
+                              )
+                            ))}
+                          </div>
                         </div>
                       </div>
                     </div>
