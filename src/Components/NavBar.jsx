@@ -8,7 +8,7 @@ const NavBar = () => {
     }
 
   return (
-    <header className='flex items-center w-[90%] md:w-4/5 justify-between px-10 rounded-full py-[0.7rem] md:mx-[10%] mx-[5%] fixed top-2 bg-white shadow-md z-50'>
+    <header className='flex items-center w-[90%] md:w-4/5 justify-between px-10 rounded-full md:py-[0.7rem] py-1 md:mx-[10%] mx-[5%] fixed top-2 bg-white shadow-md z-50'>
       <h1 className='main-txt'>TaskFlow</h1>
       <nav className='flex none items-center gap-10 navMenu'>
         <ul className='flex gap-4 text-lg list-none m-0'>
