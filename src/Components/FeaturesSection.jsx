@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaBell, FaHandshake } from 'react-icons/fa';
 import { FaCalendar, FaMobileScreen } from 'react-icons/fa6';
+import { Reveal } from '../Reveal';
 
 
 const FeaturesSection = () => {
@@ -28,9 +29,10 @@ const FeaturesSection = () => {
       ];
 
   return (
-    <section className='flex flex-col justify-center items-center py-20 px-16'>
+    <section id='Features' className='flex flex-col justify-center items-center py-20 px-16'>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-10/12 md:w-full">
             {features.map((value, index) => (
+              <Reveal>
               <div key={index} className="card-elegant text-center hover-lift h-full">
                 <span className='bg-green-300/20 p-4 rounded-full inline-block'>
                     <value.icon className="h-8 w-8" />
@@ -38,6 +40,7 @@ const FeaturesSection = () => {
                 <h3 className="text-[1.5rem] font-semibold mb-3">{value.title}</h3>
                 <p className="text-[.9rem]">{value.description}</p>
               </div>
+              </Reveal>
             ))}
     </div>
     </section>

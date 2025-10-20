@@ -7,13 +7,13 @@ const TestimonialSection = () => {
   return (
     <>
     {/* Impact Carousel */}
-      <section id="highlights" className="py-5 bg-white section-padd sec">
+      <section id="Testimonies" className="paddin py-5 bg-white section-padd sec">
         <div className="container">
           <h2 className="fw-bold text-center mb-5">
             What our users are saying
           </h2>
 
-          <div id="impactCarousel" className="carousel slide w-[85%] h-60 m-auto blurEffect" data-bs-ride="carousel" data-bs-interval="5000">
+          <div id="impactCarousel" className="carousel slide w-[85%] md:h-80 h-full m-auto blurEffect py-4" data-bs-ride="carousel" data-bs-interval="5000">
             <div className="carousel-inner h-full flex items-center">
               {[
                 { img: "https://images.unsplash.com/photo-1665586510539-cc2a12a54347?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", title: "David J. testimony", desc: "TaskFlow transformed my daily routine with smarter task organization, scheduled reminders, and clear priorities. I've been able to double my output while feeling far less stressed.", name: "David J.", rating: 5 },

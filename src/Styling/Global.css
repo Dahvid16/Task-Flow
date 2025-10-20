@@ -28,7 +28,7 @@
 }
 
 .paddin {
-    padding-block: 8rem;
+    scroll-margin-top: 30px;
 }
 
 .navbar {
@@ -52,4 +52,24 @@
 .pricingBtn {
     border-radius: 15px;
     font-size: 1rem;
+}
+
+li:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+}
+
+@media screen and (max-width: 890px) {
+    .navMenu {
+        display: none;
+    }
+    .closeNav {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 890.1px) {
+    .closeNav {
+        display: none;
+    }
 }

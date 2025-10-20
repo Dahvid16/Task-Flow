@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaCheckCircle, FaEnvelope, FaFacebookF, FaMapMarker, FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
+import { Reveal } from '../Reveal';
 
 const Footer = () => {
   const [formData, setFormData] = useState({
@@ -38,10 +39,11 @@ const Footer = () => {
   };
 
   return (
-    <footer className="sec text-primary-foreground py-16 px-16 md:py-20" style={{borderRadius: "50px 50px 0 0"}}>
+    <footer id='Contact' className="paddin sec text-primary-foreground pt-16 pb-10 px-6 md:pt-20" style={{borderRadius: "50px 50px 0 0"}}>
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
+      <Reveal> 
           <div>
             <h4 className="text-xl md:text-2xl font-bold mb-6 text-gradient-gold">Get In Touch</h4>                   
             {isSubmitted ? (
@@ -108,8 +110,10 @@ const Footer = () => {
             </form>
             )}
           </div>
+      </Reveal>
 
           {/* Contact Information & Links */}
+          <Reveal>
           <div className="space-y-8">
           {/* Logo and Description */}
             <div>
@@ -119,7 +123,7 @@ const Footer = () => {
               </a>
               </h3>
               <p className="text-body text-white/80">
-                TaskFlow is an all-in-one task management platform — organize, prioritize, and track your work effortlessly using an intuitive interface and powerful integrations.
+                TaskFlow is an all-in-one task management platform to organize, prioritize, and track your work effortlessly using an intuitive interface and powerful integrations.
               </p>
             </div>
 
@@ -150,11 +154,12 @@ const Footer = () => {
               <a href="#" className="p-3 blurEffect rounded-lg" aria-label='Visit our FaceBook Page'  style={{borderRadius: '12px'}}>
                 <FaFacebookF className="h-6 w-6 text-black/80"/>
               </a>
-              <a href="https://wa.me/2348162016410?text=Good%20Day%20Sir.%20I%20got%20your%20number%20from%20your%20website.%20I.." className="p-3 bg-white/10 rounded-lg hover:bg-gold hover:text-primary transition-all duration-300 blurEffect"  style={{borderRadius: '12px'}} aria-label='Visit our Whatsapp Page'>
+              <a href="#" className="p-3 bg-white/10 rounded-lg hover:bg-gold hover:text-primary transition-all duration-300 blurEffect"  style={{borderRadius: '12px'}} aria-label='Visit our Whatsapp Page'>
                 <FaWhatsapp className="h-6 w-6 text-black/80" />
               </a>
             </div>
           </div>
+          </Reveal>
         </div>
 
         {/* Bottom Bar */}

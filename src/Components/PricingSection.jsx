@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaCheckCircle } from 'react-icons/fa';
+import { Reveal } from '../Reveal';
 
 const PricingSection = () => {
     const services = [
@@ -42,12 +43,13 @@ const PricingSection = () => {
     }
   ];
   return (
-      <section className="py-16 md:py-20">
+      <section id='Pricing' className="py-16 md:py-20 paddin">
         <div className="flex justify-center items-center md-w-full">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-[80%]">
             {services.map((service, index) => {
               const isFeatured = index === 1;
               return (
+                <Reveal>
               <div key={index} className={`flex flex-col px-4 py-7 rounded-xl shadow-lg ${isFeatured ? 'bg-gradient-to-r border-2 border-green-600 md:scale-110' : 'bg-white'}`}>
                 <div className="flex items-start space-x-4 mb-6">
                   <div>
@@ -63,6 +65,7 @@ const PricingSection = () => {
                     </div>
                 </div>
                 
+                <Reveal>
                 <div className="space-y-2">
                   <ul className="flex flex-col gap-1 text-sm p-0">
                     {service.features.map((feature, featureIndex) => (
@@ -73,12 +76,14 @@ const PricingSection = () => {
                     ))}
                   </ul>
                 </div>
-                  <button className={`px-3 py-[0.6rem] mt-8 flex items-center gap-1 pricingBtn ${isFeatured ? 'bg-[#37ad3c] font-semibold text-white/95' : 'bg-black/15 text-black/95 font-semibold'}`}>
+                </Reveal>
+                  <button className={`px-3 py-[0.6rem] flex items-center gap-1 pricingBtn ${isFeatured ? 'bg-[#37ad3c] font-semibold text-white/95' : 'bg-black/15 text-black/95 font-semibold'}`}>
                     <a href={`/contact#form`} state={{ service: service.title }} className="text-black" style={{textDecoration: 'none'}}>
                     {service.button}
                     </a>
                   </button>
               </div>
+              </Reveal>
               );
             })}
           </div>
