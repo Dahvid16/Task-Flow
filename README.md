@@ -8,13 +8,13 @@ TaskFlow is a responsive web application designed to help individuals and teams 
 
 ## Screenshots
 
-![TaskFlow Hero Section](screenshots/TaskFlow_hero.png)
+![TaskFlow Hero Section](screenshots/hero.png)
 *The landing page hero section with key features and call-to-action.*
 
-![Component Examples](screenshots/TaskFlow_components.png)
+![Component Examples](screenshots/components.png)
 *A selection of shadcn-ui based components used throughout the app.*
 
-![Component Examples](screenshots/TaskFlow_contact.png)
+![Contact Section](screenshots/contact.png)
 
 ## Features
 
